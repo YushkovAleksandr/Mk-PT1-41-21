@@ -1,18 +1,15 @@
-# def fib(x):
-#     if x==1:
-#         return 0
-#     if x==2:
-#         return 1
-#     return fib(x-1)+fib(x-2)
+# 3. Написать функцию для вычисления n первых чисел Фибоначчи.
+# Примеры вызова: 
+# fib(5) -> 0,1,1,2,3
+# fib(10) -> 0,1,1,2,3,5,8,13,21,34
 
-# def a(c = int(input()) + 1):
-#     s = []
-#     for i in range(1,c):
-#         b = fib(i)
-#         s.append(b)
-#     return s 
-
-# print(a())
+while True:
+    try:
+        y = int(input()) + 1
+        break  
+    except:
+        print('Данные введены неккоректно')
+        continue
 
 def fib(x):
     if x==1:
@@ -21,11 +18,11 @@ def fib(x):
         return 1
     return fib(x-1)+fib(x-2)
 
-def a(c = int(input()) + 1):
-    s = ''
+def a(c):
+    s = []
     for i in range(1,c):
         b = fib(i)
-        s += f'{b}, '
-    return s 
+        s.append(b)
+    return (', '.join(map(str,s))) 
 
-print(a())
+print(a(y))
