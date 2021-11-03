@@ -5,7 +5,7 @@
 
 while True:
     try:
-        y = int(input()) + 1
+        y = int(input('Введите количество чисел для отображения: ')) + 1
         break  
     except:
         print('Данные введены неккоректно')
