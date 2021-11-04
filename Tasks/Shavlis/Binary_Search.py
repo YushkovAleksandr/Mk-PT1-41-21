@@ -43,21 +43,21 @@ def input_1():
     for i in range(d,e):
         l.append(i)
     print('Введенный список: ', l)
-    return input_1(l, c)
+    return l, c
 
 print(input_1())
 
-# def bin(x, y):
-#     a = 0 
-#     b = len(x)-1
-#     mid = (a + b)//2
+def bin(x, y):
+    a = 0 
+    b = len(x)-1
+    mid = (a + b)//2
 
-#     if (y == x[mid]):
-#         return mid
+    if (y == x[mid]):
+        return mid
    
-#     elif (y > x[mid]):
-#         return bin(x[mid+1:], y) + (mid + 1)
-#     else:
-#         return bin(x[:mid], y)
+    elif (y > x[mid]):
+        return bin(x[mid+1:], y) + (mid + 1)
+    else:
+        return bin(x[:mid], y)
 
-# print(bin(input_1()))
+print(bin(input_1()))
