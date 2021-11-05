@@ -51,3 +51,23 @@ def fibonacci_rec(n, fib1=0, fib2=1):
 
 
 fibonacci_rec(10)
+
+# Возведение в степень с использованием рекурсии
+def exponentiation(num: int, exp: int):
+    if exp == 0:
+        return 1
+    elif exp == 1:
+        return num
+    elif exp != 1:
+        return num * exponentiation(num, exp - 1)
+
+
+exponentiation(2, 5)
+
+
+# Нахождение наибольшего общего делителя
+def find_NOD(a, b):
+    return a if not b else find_NOD(b, a % b)
+
+
+find_NOD(68, 24)
