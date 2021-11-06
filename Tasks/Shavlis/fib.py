@@ -25,4 +25,4 @@ def a(c):
         s.append(b)
     return (', '.join(map(str,s))) 
 
-print(a(y))
+print(f'{y-1} первых чисел Фибоначчи: ', a(y))
