@@ -17,7 +17,6 @@ if __name__ ==  "__main__":
     a = int(input("Введите количество первых чисел Фибоначчи: "))
 
     result = []
-    start = 0
-    for i in range(start, a):
+    for i in range(0, a):
         result.append(fibonacci(i))
     print(', '.join(str(x) for x in result))
