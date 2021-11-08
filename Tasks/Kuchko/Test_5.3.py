@@ -5,18 +5,16 @@
 
 
 def fibonacci(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
+    if n == 1:
+        return [0]
+    elif n == 2:
+        return [0,1]
     else:
-        return fibonacci(n-2) + fibonacci(n-1)
+        x = fibonacci(n-1)
+        x.append(sum(x[:-3:-1]))
+        return x
 
 if __name__ ==  "__main__":
-    
-    a = int(input("Введите количество первых чисел Фибоначчи: "))
 
-    result = []
-    for i in range(0, a):
-        result.append(fibonacci(i))
-    print(', '.join(str(x) for x in result))
+    a = int(input("Введите количество первых чисел Фибоначчи: "))
+    print(', '.join(str(x) for x in fibonacci(a)))
