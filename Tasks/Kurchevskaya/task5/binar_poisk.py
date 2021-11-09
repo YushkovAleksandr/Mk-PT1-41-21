@@ -9,7 +9,7 @@ def valid():
             continue
 
 list_binary = valid()
-print("Sorted list:", list_binary)
+
 
 def valid2():
     while True:
@@ -41,4 +41,6 @@ def binar_search(list_binary,index0,indexn, s_value):
 
 index0=0
 indexn=len(list_binary)-1
-print(binar_search(list_binary, index0,indexn,value))
+if __name__ =="__main__":
+    print("Sorted list:", list_binary)
+    print(binar_search(list_binary, index0,indexn,value))

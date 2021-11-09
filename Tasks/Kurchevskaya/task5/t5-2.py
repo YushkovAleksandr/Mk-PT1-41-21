@@ -8,4 +8,5 @@ def sum(lst):
             count = count + i
     return count
 
-print('The sum of the list items is: ', sum(lst))
+if __name__ =="__main__":
+    print('The sum of the list items is: ', sum(lst))
