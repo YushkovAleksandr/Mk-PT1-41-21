@@ -4,10 +4,10 @@ def validation():
         print()
 
         try: 
-            [int(x) for x in list]
+            new_list = [int(x) for x in list]
             if len(list) == 0:
                 raise RuntimeError('произошла ошибка, будьте внимательны при вводе')
-            return [int(x) for x in list]
+            return new_list
         except ValueError:
             print('произошла ошибка, повторите ввод')
             print()
