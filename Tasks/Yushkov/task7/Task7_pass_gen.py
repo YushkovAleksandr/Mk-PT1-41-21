@@ -12,15 +12,18 @@ def pas_gen():
  1: Only letters and numbers 
  2: Letters, numbers and symbols
   """) 
-    if operation == "1":
-        all = simple_symbols
-    elif operation == "2":
-        all = simple_symbols + special_symbols
-    else:
-        print("Make a choice: 1 or 2")
-        return
-    length = int(input('Pleas, enter lenпth of your password:\n'))
-    password = "".join(random.sample(all, length))
-    print(password)
+    while True:
+        if operation == "1":
+            all = simple_symbols
+        elif operation == "2":
+            all = simple_symbols + special_symbols
+        else:
+            print("Make a choice: 1 or 2")
+            return
+        length = int(input('Pleas, enter lenпth of your password:\n'))
+        password = "".join(random.sample(all, length))
+        print(password)
+        yield password
 if __name__ == "__main__":
-    pas_gen() 
+    pas = iter(pas_gen())
+    print(next(pas)) 
