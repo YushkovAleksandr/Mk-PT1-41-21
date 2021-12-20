@@ -94,6 +94,7 @@ main .wr img:hover {
 
 main .my_worksh1 h1 {
     font-family: 'Cambay', sans-serif;
+    padding: 50px;
     margin-left: 52%;
     margin-right: auto;
     width: 6em;

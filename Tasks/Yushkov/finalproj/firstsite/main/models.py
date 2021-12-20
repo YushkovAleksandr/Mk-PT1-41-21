@@ -7,9 +7,9 @@ class Author(models.Model):
     def __str__(self):
         return self.name
 
-class Coment(models.Model):
+class Post(models.Model):
     
-    titel = models.CharField('Name', max_length=50, blank=False)
+    title = models.CharField('Name', max_length=50, blank=False)
     content = models.TextField(blank=False)
     issued = models.DateTimeField(blank=False)
 

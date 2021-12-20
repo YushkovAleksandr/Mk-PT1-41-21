@@ -13,19 +13,5 @@
         <a href="viber://chat?number=%2B375293491910"><li>/Chat with me in Viber/</li></a>
         <a href="https://www.linkedin.com/in/kristina-yushkova-b48451ba/"><li>/My Linkedin/</li></a>
     </ul>  
-    <p>Also, you can read some reviews about me</p>       
-    <h6>Coments:</h6>
-    <ul>
-        {% for c in coments %}
-            <div style="margin-left: 400px">
-                <a href="{% url 'coments' c.id %}">
-                <h4>{{ c.titel }}</h4>
-                </a>
-                <p>{{ c.content }}</p>
-                <p>{{ c.issued }}</p>
-                <p>{{ c.author }}</p>
-            </div>
-        {% endfor %}
-    </ul>
 </div>
 {% endblock %}

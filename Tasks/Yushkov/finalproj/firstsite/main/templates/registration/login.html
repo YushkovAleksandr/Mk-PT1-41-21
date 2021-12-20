@@ -11,10 +11,10 @@
       <p style="margin-left: 330px;">Your account doesn't have access to this page. To proceed,
       please login with an account that has access.</p>
     {% else %}
-      <p style="margin-left: 330px;">Please login to see this page.</p>
+      <p style="margin-left: 330px;">Please login to see this page. If you don't have an account <a href="{% url "register" %}">register here</a></p></p>
     {% endif %}
   {% endif %}
-  
+ 
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
     <table style="margin-left: 330px;">

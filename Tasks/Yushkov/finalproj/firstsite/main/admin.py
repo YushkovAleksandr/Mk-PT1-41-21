@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Author, Coment
+from .models import Author, Post
 
 admin.site.register(Author)
-admin.site.register(Coment)
+admin.site.register(Post)
 
